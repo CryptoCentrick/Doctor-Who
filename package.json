@@ -1,0 +1,30 @@
+{
+  "name": "doctor-who",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@10.9.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:web",
+    "dev:web": "npm --workspace @doctor-who/web run dev",
+    "dev:desktop": "npm --workspace @doctor-who/desktop run tauri:dev",
+    "build": "npm run build:web",
+    "build:web": "npm --workspace @doctor-who/web run build",
+    "build:desktop": "npm --workspace @doctor-who/desktop run tauri:build",
+    "lint": "npm --workspace @doctor-who/web run lint",
+    "prisma:generate": "npm --workspace @doctor-who/web run prisma:generate",
+    "prisma:push": "npm --workspace @doctor-who/web run prisma:push",
+    "prisma:seed": "npm --workspace @doctor-who/web run prisma:seed",
+    "worker": "npm --workspace @doctor-who/web run worker",
+    "jobs:schedule": "npm --workspace @doctor-who/web run jobs:schedule",
+    "infra:up": "docker compose up -d",
+    "infra:down": "docker compose down"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

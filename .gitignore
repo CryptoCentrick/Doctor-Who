@@ -1,0 +1,14 @@
+node_modules
+.next
+dist
+build
+coverage
+.turbo
+.vercel
+*.log
+.DS_Store
+apps/web/.env
+apps/web/.env.local
+apps/web/.env.production
+apps/web/prisma/dev.db
+apps/desktop/src-tauri/target

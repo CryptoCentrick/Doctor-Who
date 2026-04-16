@@ -1,0 +1,19 @@
+[package]
+name = "doctor-who-desktop"
+version = "0.1.0"
+description = "Doctor Who desktop wrapper"
+authors = ["OpenAI Codex"]
+edition = "2021"
+
+[lib]
+name = "doctor_who_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.0.3" }
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri = { version = "2.1.1" }
+tauri-plugin-sql = { version = "2.0.2", features = ["sqlite"] }
