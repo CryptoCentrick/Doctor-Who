@@ -5,6 +5,7 @@ import GitHubProvider from "next-auth/providers/github";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 
 import { prisma } from "@/lib/prisma";
+import { shouldUseDatabase } from "@/lib/runtime-config";
 
 const providers: NextAuthOptions["providers"] = [];
 
@@ -49,10 +50,10 @@ if (providers.length === 0) {
 }
 
 export const authOptions: NextAuthOptions = {
-  adapter: process.env.DATABASE_URL ? PrismaAdapter(prisma) : undefined,
+  adapter: shouldUseDatabase() ? PrismaAdapter(prisma) : undefined,
   providers,
   session: {
-    strategy: process.env.DATABASE_URL ? "database" : "jwt"
+    strategy: shouldUseDatabase() ? "database" : "jwt"
   },
   pages: {
     signIn: "/settings"

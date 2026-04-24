@@ -18,7 +18,7 @@ export function ScoreGauge({ score }: { score: number }) {
     startAngle: -Math.PI / 1.4,
     endAngle: angle(normalizedScore)
   });
-  const color = normalizedScore > 70 ? "#22c55e" : normalizedScore > 40 ? "#eab308" : "#ef4444";
+  const color = normalizedScore > 70 ? "#4FAFA8" : normalizedScore > 40 ? "#80B3AD" : "#E08978";
 
   return (
     <div className="relative flex size-52 items-center justify-center">

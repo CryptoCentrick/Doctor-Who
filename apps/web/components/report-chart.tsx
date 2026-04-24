@@ -21,7 +21,7 @@ import {
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const palette = ["#17b2c7", "#ffb347", "#7aa2ff", "#45e56b", "#ff8c69"];
+const palette = ["#4FAFA8", "#E59A8D", "#79B8B2", "#D88D82", "#A7CFCB"];
 
 function HeatmapChart({ data }: { data: Array<Record<string, string | number>> }) {
   return (

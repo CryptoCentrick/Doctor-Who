@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { Prisma, PrismaClient } from "@prisma/client";
 import { demoSnapshot } from "@doctor-who/shared";
 
 const prisma = new PrismaClient();
@@ -37,7 +37,7 @@ async function main() {
       unit: reading.unit,
       source: reading.source,
       recordedAt: new Date(reading.recordedAt),
-      metadata: reading.metadata
+      metadata: reading.metadata as Prisma.InputJsonValue | undefined
     }))
   });
 
@@ -47,7 +47,7 @@ async function main() {
       userId: user.id,
       startTime: new Date(session.startTime),
       endTime: new Date(session.endTime),
-      stages: session.stages,
+      stages: session.stages as Prisma.InputJsonValue,
       apneaEvents: session.apneaEvents,
       snoreEvents: session.snoreEvents
     }))
@@ -63,7 +63,7 @@ async function main() {
       avgHeartRate: session.avgHeartRate,
       startedAt: new Date(session.startedAt),
       distanceKm: session.distanceKm ?? null,
-      metadata: session.metadata
+      metadata: session.metadata as Prisma.InputJsonValue | undefined
     }))
   });
 
@@ -99,7 +99,7 @@ async function main() {
         moduleType: report.moduleType,
         generatedAt: new Date(report.generatedAt),
         score: report.data.score,
-        data: report.data,
+        data: report.data as unknown as Prisma.InputJsonValue,
         pdfUrl: report.pdfUrl
       }
     });

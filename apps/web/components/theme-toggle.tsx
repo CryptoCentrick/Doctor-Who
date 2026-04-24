@@ -14,7 +14,7 @@ export function ThemeToggle() {
       type="button"
       variant="ghost"
       size="icon"
-      className="rounded-full border border-border/60 bg-background/60"
+      className="rounded-full border border-border/80 bg-background/90 text-foreground"
       onClick={() => setTheme(isDark ? "light" : "dark")}
     >
       {isDark ? <SunMedium className="size-4" /> : <MoonStar className="size-4" />}

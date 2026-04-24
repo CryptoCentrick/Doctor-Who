@@ -11,37 +11,37 @@ export const REPORT_MODULES: DashboardCardDefinition[] = [
     moduleType: "CARDIOVASCULAR",
     title: "Cardiovascular & Vitals",
     description: "Heart rate, HRV, blood pressure, oxygen saturation, and risk context.",
-    accent: "#00d3a7"
+    accent: "#4FAFA8"
   },
   {
     moduleType: "METABOLIC",
     title: "Metabolic & Body Composition",
     description: "BMI, body fat, glucose, calorie balance, and metabolic trends.",
-    accent: "#ffb347"
+    accent: "#E59A8D"
   },
   {
     moduleType: "SLEEP",
     title: "Sleep Health",
     description: "Sleep debt, stage balance, circadian consistency, and overnight events.",
-    accent: "#7aa2ff"
+    accent: "#79B8B2"
   },
   {
     moduleType: "FITNESS",
     title: "Fitness & Recovery",
     description: "VO2 max estimates, activity volume, and recovery readiness.",
-    accent: "#45e56b"
+    accent: "#58A89C"
   },
   {
     moduleType: "STRESS",
     title: "Stress & Mental Wellness",
     description: "Stress load, breathing irregularity, focus patterns, and break prompts.",
-    accent: "#ff8c69"
+    accent: "#EAA596"
   },
   {
     moduleType: "PREDICTIVE",
     title: "Predictive & Longitudinal",
     description: "Trend forecasts, biological age, anomaly flags, and risk stratification.",
-    accent: "#f767ff"
+    accent: "#73AFA9"
   }
 ];
 
@@ -57,22 +57,22 @@ export function getScoreBand(score: number) {
   if (score <= 40) {
     return {
       label: "Needs attention",
-      className: "bg-red-500/15 text-red-300 border-red-500/30",
-      hex: "#ef4444"
+      className: "border-[rgba(224,137,120,0.35)] bg-[rgba(224,137,120,0.14)] text-[rgb(154,79,64)] dark:text-[rgb(247,203,194)]",
+      hex: "#E08978"
     };
   }
 
   if (score <= 70) {
     return {
       label: "Watch closely",
-      className: "bg-yellow-500/15 text-yellow-200 border-yellow-500/30",
-      hex: "#eab308"
+      className: "border-[rgba(128,179,173,0.3)] bg-[rgba(128,179,173,0.14)] text-[rgb(71,104,100)] dark:text-[rgb(188,220,216)]",
+      hex: "#80B3AD"
     };
   }
 
   return {
     label: "On track",
-    className: "bg-emerald-500/15 text-emerald-200 border-emerald-500/30",
-    hex: "#22c55e"
+    className: "border-[rgba(79,175,168,0.35)] bg-[rgba(79,175,168,0.16)] text-[rgb(44,108,103)] dark:text-[rgb(198,236,232)]",
+    hex: "#4FAFA8"
   };
 }

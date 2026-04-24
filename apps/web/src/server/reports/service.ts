@@ -10,15 +10,18 @@ import {
 import type { Prisma } from "@prisma/client";
 
 import { prisma } from "@/lib/prisma";
+import { shouldUseDatabase } from "@/lib/runtime-config";
 
-function prismaRecordToReport(record: {
+type StoredReportRecord = {
   id: string;
   userId: string;
   moduleType: ReportModuleType;
   generatedAt: Date;
   pdfUrl: string | null;
-  data: Prisma.JsonValue;
-}): HealthReport {
+  data: unknown;
+};
+
+function prismaRecordToReport(record: StoredReportRecord): HealthReport {
   return {
     id: record.id,
     userId: record.userId,
@@ -30,7 +33,7 @@ function prismaRecordToReport(record: {
 }
 
 export async function listReports(moduleType?: ReportModuleType) {
-  if (!process.env.DATABASE_URL) {
+  if (!shouldUseDatabase()) {
     return moduleType
       ? demoSnapshot.reports.filter((report) => report.moduleType === moduleType)
       : demoSnapshot.reports;
@@ -45,7 +48,7 @@ export async function listReports(moduleType?: ReportModuleType) {
     });
 
     return records.length
-      ? records.map((record) => prismaRecordToReport(record as typeof record[number]))
+      ? (records as StoredReportRecord[]).map((record) => prismaRecordToReport(record))
       : demoSnapshot.reports;
   } catch {
     return demoSnapshot.reports;
@@ -79,7 +82,7 @@ export async function generateReports(moduleTypes?: ReportModuleType[]) {
     data: generateModuleReport(moduleType, demoSnapshot)
   }));
 
-  if (process.env.DATABASE_URL) {
+  if (shouldUseDatabase()) {
     try {
       for (const report of generated) {
         await prisma.healthReport.create({
@@ -88,7 +91,7 @@ export async function generateReports(moduleTypes?: ReportModuleType[]) {
             moduleType: report.moduleType,
             generatedAt: new Date(report.generatedAt),
             score: report.data.score,
-            data: report.data,
+            data: report.data as unknown as Prisma.InputJsonValue,
             pdfUrl: report.pdfUrl
           }
         });
