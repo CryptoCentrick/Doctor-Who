@@ -23,7 +23,7 @@ export function ScoreGauge({ score }: { score: number }) {
   return (
     <div className="relative flex size-52 items-center justify-center">
       <svg viewBox="-80 -80 160 110" className="size-full">
-        <path d={backgroundArc ?? ""} fill="rgba(255,255,255,0.08)" />
+        <path d={backgroundArc ?? ""} fill="rgba(79,175,168,0.16)" />
         <path d={filledArc ?? ""} fill={color} />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">

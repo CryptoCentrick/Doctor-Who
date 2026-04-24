@@ -14,7 +14,7 @@ export function SleepModePanel({ sessions }: { sessions: SleepSession[] }) {
 
   return (
     <div className="grid gap-6 xl:grid-cols-[0.95fr,1.05fr]">
-      <Card className="glass-panel border-white/10">
+      <Card className="glass-panel border-border/70">
         <CardHeader>
           <CardTitle>Overnight monitoring</CardTitle>
           <CardDescription>
@@ -54,7 +54,7 @@ export function SleepModePanel({ sessions }: { sessions: SleepSession[] }) {
         </CardContent>
       </Card>
 
-      <Card className="glass-panel border-white/10">
+      <Card className="glass-panel border-border/70">
         <CardHeader>
           <CardTitle>Recent sleep event log</CardTitle>
         </CardHeader>
@@ -79,3 +79,4 @@ export function SleepModePanel({ sessions }: { sessions: SleepSession[] }) {
     </div>
   );
 }
+

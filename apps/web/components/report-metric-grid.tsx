@@ -8,7 +8,7 @@ export function ReportMetricGrid({
   return (
     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
       {items.map((item) => (
-        <Card key={item.label} className="glass-panel border-white/10">
+        <Card key={item.label} className="glass-panel border-border/70">
           <CardContent className="space-y-3 pt-6">
             <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{item.label}</p>
             <p className="font-display text-2xl font-semibold">{item.value}</p>
@@ -19,3 +19,4 @@ export function ReportMetricGrid({
     </div>
   );
 }
+

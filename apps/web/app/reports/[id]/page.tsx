@@ -19,7 +19,7 @@ export default async function ReportDetailPage({
 
   return (
     <div className="space-y-6">
-      <Card className="glass-panel border-white/10">
+      <Card className="glass-panel border-border/70">
         <CardHeader>
           <Badge variant="outline">Report detail</Badge>
           <CardTitle className="text-3xl">{report.moduleType.replace("_", " ")}</CardTitle>
@@ -33,3 +33,4 @@ export default async function ReportDetailPage({
     </div>
   );
 }
+

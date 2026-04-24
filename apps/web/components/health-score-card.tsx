@@ -21,7 +21,7 @@ export function HealthScoreCard({
   bandLabel: string;
 }) {
   return (
-    <Card className="glass-panel border-white/10">
+    <Card className="glass-panel border-border/70">
       <CardHeader>
         <div className="flex items-center justify-between">
           <div
@@ -52,3 +52,4 @@ export function HealthScoreCard({
     </Card>
   );
 }
+

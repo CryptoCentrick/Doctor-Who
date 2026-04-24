@@ -55,7 +55,7 @@ export function ReportChart({
   helper?: string;
 }) {
   return (
-    <Card className="glass-panel border-white/10">
+    <Card className="glass-panel border-border/70">
       <CardHeader className="pb-4">
         <CardTitle className="text-lg">{title}</CardTitle>
         {helper ? <p className="text-sm text-muted-foreground">{helper}</p> : null}
@@ -141,3 +141,4 @@ export function ReportChart({
     </Card>
   );
 }
+

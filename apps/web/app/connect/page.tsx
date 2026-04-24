@@ -8,7 +8,7 @@ import { devices } from "@/lib/mock-data";
 export default function ConnectPage() {
   return (
     <div className="space-y-6">
-      <Card className="glass-panel border-white/10">
+      <Card className="glass-panel border-border/70">
         <CardHeader>
           <Badge variant="outline">Connection hub</Badge>
           <CardTitle className="text-3xl">Wearables, peripherals, and data imports</CardTitle>
@@ -19,7 +19,7 @@ export default function ConnectPage() {
       </Card>
 
       <div className="grid gap-6 xl:grid-cols-[1.05fr,0.95fr]">
-        <Card className="glass-panel border-white/10">
+        <Card className="glass-panel border-border/70">
           <CardHeader>
             <CardTitle>Connected devices</CardTitle>
           </CardHeader>
@@ -64,7 +64,7 @@ export default function ConnectPage() {
             const Icon = item.icon;
 
             return (
-              <Card key={item.title} className="glass-panel border-white/10">
+              <Card key={item.title} className="glass-panel border-border/70">
                 <CardContent className="flex items-start justify-between gap-4 pt-6">
                   <div>
                     <div className="mb-3 rounded-2xl bg-primary/15 p-3">
@@ -81,7 +81,7 @@ export default function ConnectPage() {
         </div>
       </div>
 
-      <Card className="glass-panel border-white/10">
+      <Card className="glass-panel border-border/70">
         <CardHeader>
           <CardTitle>Supported cloud imports</CardTitle>
           <CardDescription>Fitbit OAuth, Garmin export ingestion, Google Fit JSON, Apple Health XML.</CardDescription>
@@ -98,3 +98,4 @@ export default function ConnectPage() {
     </div>
   );
 }
+

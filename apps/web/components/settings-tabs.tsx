@@ -15,7 +15,7 @@ export function SettingsTabs() {
       </TabsList>
 
       <TabsContent value="profile">
-        <Card className="glass-panel border-white/10">
+        <Card className="glass-panel border-border/70">
           <CardHeader>
             <CardTitle>Profile & units</CardTitle>
           </CardHeader>
@@ -41,7 +41,7 @@ export function SettingsTabs() {
       </TabsContent>
 
       <TabsContent value="privacy">
-        <Card className="glass-panel border-white/10">
+        <Card className="glass-panel border-border/70">
           <CardHeader>
             <CardTitle>Storage & sharing</CardTitle>
           </CardHeader>
@@ -66,7 +66,7 @@ export function SettingsTabs() {
       </TabsContent>
 
       <TabsContent value="notifications">
-        <Card className="glass-panel border-white/10">
+        <Card className="glass-panel border-border/70">
           <CardHeader>
             <CardTitle>Alert preferences</CardTitle>
           </CardHeader>
@@ -88,3 +88,4 @@ export function SettingsTabs() {
     </Tabs>
   );
 }
+

@@ -60,7 +60,7 @@ export function ReportsExplorer({ reports }: { reports: HealthReport[] }) {
       </div>
 
       {filteredReports.length === 0 ? (
-        <Card className="glass-panel border-white/10">
+        <Card className="glass-panel border-border/70">
           <CardContent className="pt-6">
             <p className="font-display text-xl font-semibold">No reports match this filter.</p>
             <p className="mt-2 text-sm text-muted-foreground">
@@ -75,7 +75,7 @@ export function ReportsExplorer({ reports }: { reports: HealthReport[] }) {
 
             return (
               <Link key={report.id} href={`/reports/${report.id}`}>
-                <Card className="glass-panel h-full border-white/10 transition hover:-translate-y-1">
+                <Card className="glass-panel h-full border-border/70 transition hover:-translate-y-1">
                   <CardHeader>
                     <div className="flex items-center justify-between gap-3">
                       <Badge variant={report.data.score > 70 ? "success" : report.data.score > 40 ? "warning" : "danger"}>
@@ -107,3 +107,4 @@ export function ReportsExplorer({ reports }: { reports: HealthReport[] }) {
     </div>
   );
 }
+

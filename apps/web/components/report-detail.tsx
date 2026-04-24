@@ -39,7 +39,7 @@ export function ReportDetail({ report }: { report: HealthReport }) {
   return (
     <div className="space-y-6">
       <div className="grid gap-6 xl:grid-cols-[320px,1fr]">
-        <Card className="glass-panel border-white/10">
+        <Card className="glass-panel border-border/70">
           <CardHeader>
             <Badge variant={report.data.score > 70 ? "success" : report.data.score > 40 ? "warning" : "danger"}>
               {report.moduleType.replace("_", " ")}
@@ -96,7 +96,7 @@ export function ReportDetail({ report }: { report: HealthReport }) {
       </div>
 
       <div className="grid gap-6 xl:grid-cols-2">
-        <Card className="glass-panel border-white/10">
+        <Card className="glass-panel border-border/70">
           <CardHeader>
             <CardTitle>Trend interpretation</CardTitle>
           </CardHeader>
@@ -115,7 +115,7 @@ export function ReportDetail({ report }: { report: HealthReport }) {
           </CardContent>
         </Card>
 
-        <Card className="glass-panel border-white/10">
+        <Card className="glass-panel border-border/70">
           <CardHeader>
             <CardTitle>Recommendations & disclaimer</CardTitle>
           </CardHeader>
@@ -134,3 +134,4 @@ export function ReportDetail({ report }: { report: HealthReport }) {
     </div>
   );
 }
+

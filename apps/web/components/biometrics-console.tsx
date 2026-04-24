@@ -64,7 +64,7 @@ export function BiometricsConsole() {
       />
 
       <div className="grid gap-6 xl:grid-cols-[1.25fr,0.9fr]">
-        <Card className="glass-panel border-white/10">
+        <Card className="glass-panel border-border/70">
           <CardHeader>
             <CardTitle>Quick Scan</CardTitle>
             <CardDescription>
@@ -126,7 +126,7 @@ export function BiometricsConsole() {
         </Card>
 
         <div className="space-y-6">
-          <Card className="glass-panel border-white/10">
+          <Card className="glass-panel border-border/70">
             <CardHeader>
               <CardTitle>Sensor bridge status</CardTitle>
             </CardHeader>
@@ -152,7 +152,7 @@ export function BiometricsConsole() {
             </CardContent>
           </Card>
 
-          <Card className="glass-panel border-white/10">
+          <Card className="glass-panel border-border/70">
             <CardHeader>
               <CardTitle>Manual fallback entry</CardTitle>
               <CardDescription>Enter vitals manually whenever a sensor or wearable is unavailable.</CardDescription>
@@ -167,3 +167,4 @@ export function BiometricsConsole() {
     </div>
   );
 }
+

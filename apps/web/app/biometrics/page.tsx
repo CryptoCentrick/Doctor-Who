@@ -5,7 +5,7 @@ import { BiometricsConsole } from "@/components/biometrics-console";
 export default function BiometricsPage() {
   return (
     <div className="space-y-6">
-      <Card className="glass-panel border-white/10">
+      <Card className="glass-panel border-border/70">
         <CardHeader>
           <Badge variant="warning">Estimate-based capture</Badge>
           <CardTitle className="text-3xl">Live biometric capture</CardTitle>
@@ -19,3 +19,4 @@ export default function BiometricsPage() {
     </div>
   );
 }
+

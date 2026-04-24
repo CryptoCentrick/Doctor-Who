@@ -30,13 +30,13 @@ export function AlertBanner({
   return (
     <Card
       className={cn(
-        "glass-panel border-white/10 p-4",
+        "glass-panel border-border/70 p-4",
         severity === "critical" && "border-red-500/30",
         severity === "warning" && "border-yellow-500/30"
       )}
     >
       <div className="flex items-start gap-4">
-        <div className="rounded-2xl bg-white/10 p-3">
+        <div className="rounded-2xl bg-background/70 p-3">
           <Icon className="size-5" />
         </div>
         <div className="flex-1">
@@ -53,3 +53,4 @@ export function AlertBanner({
     </Card>
   );
 }
+

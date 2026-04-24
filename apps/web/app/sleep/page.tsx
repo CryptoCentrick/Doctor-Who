@@ -6,7 +6,7 @@ import { sleepSessions } from "@/lib/mock-data";
 export default function SleepPage() {
   return (
     <div className="space-y-6">
-      <Card className="glass-panel border-white/10">
+      <Card className="glass-panel border-border/70">
         <CardHeader>
           <Badge variant="outline">Overnight mode</Badge>
           <CardTitle className="text-3xl">Sleep health and overnight audio monitoring</CardTitle>
@@ -20,3 +20,4 @@ export default function SleepPage() {
     </div>
   );
 }
+

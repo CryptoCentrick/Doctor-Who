@@ -18,7 +18,7 @@ export default function DashboardPage() {
       <OnboardingWizard />
 
       <section className="grid gap-6 xl:grid-cols-[1.2fr,0.8fr]">
-        <Card className="glass-panel pattern-grid overflow-hidden border-white/10">
+        <Card className="glass-panel pattern-grid overflow-hidden border-border/70">
           <CardHeader className="relative">
             <Badge variant="outline">Daily overview</Badge>
             <CardTitle className="max-w-2xl text-3xl sm:text-4xl">
@@ -47,7 +47,7 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
 
-        <Card className="glass-panel border-white/10">
+        <Card className="glass-panel border-border/70">
           <CardHeader>
             <Badge variant="success">Overall Health Index</Badge>
             <CardTitle>Composite 30/60/90 day outlook</CardTitle>
@@ -93,7 +93,7 @@ export default function DashboardPage() {
           message={alerts[0]?.message ?? "No active alerts at the moment."}
         />
 
-        <Card className="glass-panel border-white/10">
+        <Card className="glass-panel border-border/70">
           <CardHeader>
             <CardTitle>Quick actions</CardTitle>
           </CardHeader>
@@ -116,3 +116,4 @@ export default function DashboardPage() {
     </div>
   );
 }
+

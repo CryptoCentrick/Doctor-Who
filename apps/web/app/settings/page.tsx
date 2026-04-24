@@ -5,7 +5,7 @@ import { SettingsTabs } from "@/components/settings-tabs";
 export default function SettingsPage() {
   return (
     <div className="space-y-6">
-      <Card className="glass-panel border-white/10">
+      <Card className="glass-panel border-border/70">
         <CardHeader>
           <Badge variant="outline">Preferences</Badge>
           <CardTitle className="text-3xl">Profile, units, privacy, and notifications</CardTitle>
@@ -19,3 +19,4 @@ export default function SettingsPage() {
     </div>
   );
 }
+

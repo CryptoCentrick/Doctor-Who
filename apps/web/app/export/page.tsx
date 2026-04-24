@@ -8,7 +8,7 @@ import { reports } from "@/lib/mock-data";
 export default function ExportPage() {
   return (
     <div className="space-y-6">
-      <Card className="glass-panel border-white/10">
+      <Card className="glass-panel border-border/70">
         <CardHeader>
           <Badge variant="outline">Exports</Badge>
           <CardTitle className="text-3xl">Branded PDFs and spreadsheet exports</CardTitle>
@@ -19,7 +19,7 @@ export default function ExportPage() {
       </Card>
 
       <div className="grid gap-4 xl:grid-cols-2">
-        <Card className="glass-panel border-white/10">
+        <Card className="glass-panel border-border/70">
           <CardHeader>
             <CardTitle>Full-suite export</CardTitle>
             <CardDescription>Generate a combined health review across all report modules.</CardDescription>
@@ -40,7 +40,7 @@ export default function ExportPage() {
           </CardContent>
         </Card>
 
-        <Card className="glass-panel border-white/10">
+        <Card className="glass-panel border-border/70">
           <CardHeader>
             <CardTitle>Per-module export</CardTitle>
             <CardDescription>Choose a report below to generate module-specific files.</CardDescription>
@@ -71,3 +71,4 @@ export default function ExportPage() {
     </div>
   );
 }
+

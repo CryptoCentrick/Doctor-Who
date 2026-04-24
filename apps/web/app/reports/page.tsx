@@ -6,7 +6,7 @@ import { reports } from "@/lib/mock-data";
 export default function ReportsPage() {
   return (
     <div className="space-y-6">
-      <Card className="glass-panel border-white/10">
+      <Card className="glass-panel border-border/70">
         <CardHeader>
           <Badge variant="outline">Generated reports</Badge>
           <CardTitle className="text-3xl">Health report library</CardTitle>
@@ -20,3 +20,4 @@ export default function ReportsPage() {
     </div>
   );
 }
+
